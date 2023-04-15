@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Chat Application</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .text {
+            background-color: aliceblue;
+            padding: 1rem;
+            width: fit-content;
+        }
+
+        .whole {
+            width: 400px;
+            padding: 1rem .5rem;
+            border: 1px solid #000;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        .user{
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flud">
+        <h2 class="roomname"></h2>
+        <div class="whole">
+            <div class="sidebar"></div>
+            <div class="plot">
+                <div class="container"></div>
+                <form id="chat-form">
+                    <input type="text" id="msg" placeholder="text" autocomplete="off" required name="msg">
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.1/qs.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./script.js"></script>
+
+</html>
